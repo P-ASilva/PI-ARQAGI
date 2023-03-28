@@ -21,7 +21,7 @@ public class CargoController {
         return cargoService.buscaCargo(id);
     }
     @PostMapping
-    public Cargo salvarMensagem(@RequestBody @Valid Cargo cargo) {
+    public Cargo salvarCargo(@RequestBody @Valid Cargo cargo) {
         return cargoService.salvarCargo(cargo);
     }
 }

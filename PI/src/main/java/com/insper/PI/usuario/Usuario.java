@@ -1,18 +1,21 @@
-package com.insper.PI.cargo;
+package com.insper.PI.usuario;
 
+import com.insper.PI.cargo.Cargo;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.persistence.criteria.CriteriaBuilder;
 
 @Getter
 @Setter
 @Entity
-public class Cargo {
+public class Usuario {
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY) // jakarta automates int ids
     private Integer id;
-    @Column
+    @ManyToOne
+    private Cargo cargo;
     private String nome;
-    private Double salario;
+    private Integer idade;
 }
